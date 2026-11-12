@@ -16,8 +16,8 @@ pipeline {
         TARGET_HOST = '192.168.31.190'
         TARGET_USER = 'deploy'
 
-        LIVE_DIR    = '/opt/devops-lab-website'
-        BACKUP_DIR  = '/opt/devops-lab-website-backups'
+        LIVE_DIR    = '/opt/devops-lab/current'
+        BACKUP_DIR  = '/opt/devops-lab-backups'
 
         DEPLOY_URL  = 'http://192.168.31.190:8081/'
     }
