@@ -1,0 +1,14 @@
+
+# Jenkins build output
+build/
+
+# Generated deployment archives
+*.tar.gz
+
+# Temporary files
+*.tmp
+
+# Editor files
+.vscode/
+.idea/
+

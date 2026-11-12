@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="DevOps Lab - A hands-on Linux, Jenkins and CI/CD learning environment.">
+
+    <title>DevOps Lab | Build. Deploy. Learn.</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="#home" class="brand">
+                <span class="brand-icon">D</span>
+
+                <span>
+                    <strong>DevOps Lab</strong>
+                    <small>BUILD · DEPLOY · LEARN</small>
+                </span>
+            </a>
+
+            <nav class="navigation">
+                <a href="#about">About</a>
+                <a href="#architecture">Infrastructure</a>
+                <a href="#pipeline">CI/CD Pipeline</a>
+            </nav>
+
+            <button id="themeToggle"
+                    class="theme-button"
+                    type="button"
+                    aria-label="Switch website theme">
+                Light mode
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero container" id="home">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    HANDS-ON DEVOPS PROJECT
+                </span>
+
+                <h1>
+                    From source code<br>
+                    to <span class="gradient-text">production.</span>
+                </h1>
+
+                <p>
+                    Welcome to DevOps Lab. A practical environment
+                    where Linux administration, automation,
+                    continuous integration and deployment come together.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#architecture" class="button primary-button">
+                        Explore infrastructure
+                    </a>
+
+                    <a href="#pipeline" class="button secondary-button">
+                        View pipeline
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="card-top">
+                    <span class="status-dot"></span>
+                    <span>LAB ENVIRONMENT</span>
+                    <span class="live-label">STATIC WEBSITE</span>
+                </div>
+
+                <h2>Deployment overview</h2>
+
+                <div class="metric">
+                    <span>Application</span>
+                    <strong>DevOps Lab</strong>
+                </div>
+
+                <div class="metric">
+                    <span>Web server</span>
+                    <strong>Nginx</strong>
+                </div>
+
+                <div class="metric">
+                    <span>Automation</span>
+                    <strong>Jenkins</strong>
+                </div>
+
+                <div class="metric">
+                    <span>Deployment port</span>
+                    <strong>8081</strong>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-dot"></span>
+                    <span id="jsStatus">
+                        Loading interactive features...
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="section container" id="about">
+
+            <div class="section-heading">
+                <span class="eyebrow">ABOUT THE PROJECT</span>
+
+                <h2>Learning by building.</h2>
+
+                <p>
+                    This website is deployed through a GitHub and Jenkins
+                    CI/CD pipeline running across three Linux virtual machines.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <span class="feature-number">01</span>
+                    <h3>Linux Administration</h3>
+                    <p>
+                        Working with users, permissions, SSH,
+                        networking and services.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-number">02</span>
+                    <h3>Automation</h3>
+                    <p>
+                        Automating build, testing and deployment
+                        through Jenkins pipelines.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-number">03</span>
+                    <h3>Infrastructure</h3>
+                    <p>
+                        Operating a multi-VM environment with
+                        separate controller, agent and application roles.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Architecture -->
+        <section class="section architecture-section" id="architecture">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">INFRASTRUCTURE</span>
+
+                    <h2>Three machines. One workflow.</h2>
+
+                    <p>
+                        Each virtual machine has a dedicated responsibility
+                        in the deployment process.
+                    </p>
+                </div>
+
+                <div class="server-grid">
+
+                    <article class="server-card">
+                        <span class="server-role">01 · CONTROLLER</span>
+
+                        <h3>Jenkins Controller</h3>
+
+                        <p class="server-ip">192.168.31.139</p>
+
+                        <ul>
+                            <li>Jenkins automation server</li>
+                            <li>Pipeline orchestration</li>
+                            <li>Build scheduling</li>
+                        </ul>
+                    </article>
+
+
+                    <article class="server-card">
+                        <span class="server-role">02 · AGENT</span>
+
+                        <h3>Jenkins Agent</h3>
+
+                        <p class="server-ip">192.168.31.180</p>
+
+                        <ul>
+                            <li>Repository checkout</li>
+                            <li>Build and testing</li>
+                            <li>SSH-based deployment</li>
+                        </ul>
+                    </article>
+
+
+                    <article class="server-card">
+                        <span class="server-role">03 · APPLICATION</span>
+
+                        <h3>Application Server</h3>
+
+                        <p class="server-ip">192.168.31.190</p>
+
+                        <ul>
+                            <li>Nginx web server</li>
+                            <li>Application hosting</li>
+                            <li>HTTP verification</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Pipeline -->
+        <section class="section container" id="pipeline">
+
+            <div class="section-heading">
+                <span class="eyebrow">CONTINUOUS INTEGRATION & DEPLOYMENT</span>
+
+                <h2>Our delivery pipeline.</h2>
+
+                <p>
+                    A developer pushes code to GitHub.
+                    Jenkins detects the change and executes the pipeline.
+                </p>
+            </div>
+
+            <div class="pipeline-list">
+
+                <div class="pipeline-step">
+                    <span class="step-number">01</span>
+                    <div>
+                        <h3>Checkout</h3>
+                        <p>Retrieve the application source from GitHub.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="step-number">02</span>
+                    <div>
+                        <h3>Build</h3>
+                        <p>Prepare the website deployment artifact.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="step-number">03</span>
+                    <div>
+                        <h3>Test</h3>
+                        <p>Validate HTML, CSS, JavaScript and artifact files.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="step-number">04</span>
+                    <div>
+                        <h3>Backup</h3>
+                        <p>Preserve the previously deployed application.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="step-number">05</span>
+                    <div>
+                        <h3>Deploy</h3>
+                        <p>Transfer the website to the application server.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="step-number">06</span>
+                    <div>
+                        <h3>Verify and Rollback</h3>
+                        <p>Check HTTP responses and restore the previous release if verification fails.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+
+            <span>DevOps Lab</span>
+
+            <span>
+                Built and deployed with Linux, GitHub and Jenkins.
+            </span>
+
+            <span>
+                © <span id="currentYear"></span>
+            </span>
+
+        </div>
+    </footer>
+
+</body>
+</html>
+
